@@ -9,14 +9,17 @@ class App extends Component{
     todos:[
         {
         id:1,
+        stat:true,
         todo:"HI"
     },
     {
         id:2,
+        stat:false,
         todo:"WOW"
     },
     {
         id:3,
+        stat:false,
         todo:"GREAT"
     }]
 }

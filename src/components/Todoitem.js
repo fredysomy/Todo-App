@@ -1,11 +1,23 @@
 import React, { Component } from 'react'
 
 export class Todoitem extends Component {
+    getstyle = ()=>{
+        if(this.props.items.stat){
+            return{
+                backgroundColor:'red'
+            }
+        }
+        else{
+            return{
+                backgroundColor:'blue'
+            }
+        }
+    }
     render() {
         return (
             <div>
-                <p>{this.props.items.id}</p>
-        <p>{this.props.items.todo}</p>
+               
+        <p style={this.getstyle()}>{this.props.items.todo}</p>
             </div>
         )
     }
