@@ -9,15 +9,15 @@ class App extends Component{
     todos:[
         {
         id:1,
-        todo:"HI"
+        todo:"---HI"
     },
     {
         id:2,
-        todo:"WOW"
+        todo:"---WOW"
     },
     {
         id:3,
-        todo:"GREAT"
+        todo:"---GREAT"
     }]
 }
     render(){
