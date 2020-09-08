@@ -10,29 +10,29 @@ class App extends Component{
         {
         id:1,
         stat:true,
-        todo:"HI"
+        todo:"LEARN REACT"
     },
     {
         id:2,
         stat:false,
-        todo:"WOW"
+        todo:"LEARN NODE JS"
     },
     {
         id:3,
         stat:false,
-        todo:"GREAT"
+        todo:"LEARN EXPRESS JS"
     },{
         id:4,
         stat:true,
-        todo:"GREATiie"
+        todo:"LEARN DJANGO FRAMEWORK"
     },{
         id:5,
         stat:false,
-        todo:"TODO APP"
+        todo:"LEARN PHP FRAMEWORKS"
     },{
         id:6,
         stat:true,
-        todo:"GREAT app by fredy"
+        todo:"COMPLETE THIS APPLICATION"
     }
 ]
 }
