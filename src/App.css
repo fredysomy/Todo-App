@@ -1,4 +1,7 @@
 .App{
-    color: red;
-    background-color: yellow;
+    color:white;
+    background-color: rgb(19, 27, 73);
+    margin:0;
+    padding-top: 23px;
+    padding-bottom: 23px;
 }

@@ -14,12 +14,12 @@ class App extends Component{
     },
     {
         id:2,
-        stat:false,
+        stat:true,
         todo:"LEARN NODE JS"
     },
     {
         id:3,
-        stat:false,
+        stat:true,
         todo:"LEARN EXPRESS JS"
     },{
         id:4,
@@ -27,7 +27,7 @@ class App extends Component{
         todo:"LEARN DJANGO FRAMEWORK"
     },{
         id:5,
-        stat:false,
+        stat:true,
         todo:"LEARN PHP FRAMEWORKS"
     },{
         id:6,
@@ -36,12 +36,23 @@ class App extends Component{
     }
 ]
 }
+ markcomplete=(id)=>{
+        this.setState({todos: this.state.todos.map(todo=>{
+            if(todo.id===id) {
+                todo.stat = !todo.stat
+            }
+            return todo;
+        })});
+    }
+    deltodo=(id)=>{
+            this.setState({todos : [...this.state.todos.filter(todo=> todo.id!==id)]});
+    }
     render(){
         return(
             <div>
             <h1 className="App" align="center">TODOS LIST</h1>
-            <h3>This is your todos</h3>
-            <Todos todos={this.state.todos} />
+            
+            <Todos todos={this.state.todos} markcomplete={this.markcomplete} deltodo={this.deltodo} />
             </div>
         )
     }
