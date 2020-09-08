@@ -28,7 +28,7 @@ export class Todoitem extends Component {
             <div className="divstyle">
                
         <p style={this.getstyle()}>
-            <input type='button' onClick={this.props.markcomplete.bind(this,id)}>Done</input>{' '}
+            <button onClick={this.props.markcomplete.bind(this,id)}>Done</button>{' '}
             {todo}
             <button style={btnstyle} onClick={this.props.deltodo.bind(this,id)}>X</button>
             </p>
