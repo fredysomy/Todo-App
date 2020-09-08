@@ -29,6 +29,10 @@ class App extends Component{
         id:5,
         stat:false,
         todo:"TODO APP"
+    },{
+        id:6,
+        stat:true,
+        todo:"GREAT app by fredy"
     }
 ]
 }
