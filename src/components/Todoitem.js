@@ -28,7 +28,7 @@ export class Todoitem extends Component {
             <div className="divstyle">
                
         <p style={this.getstyle()}>
-            <input type='checkbox' onChange={this.props.markcomplete.bind(this,id)}></input>{' '}
+            <input type='button' onClick={this.props.markcomplete.bind(this,id)}>Done</input>{' '}
             {todo}
             <button style={btnstyle} onClick={this.props.deltodo.bind(this,id)}>X</button>
             </p>
