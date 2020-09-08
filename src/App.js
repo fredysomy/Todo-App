@@ -21,7 +21,16 @@ class App extends Component{
         id:3,
         stat:false,
         todo:"GREAT"
-    }]
+    },{
+        id:4,
+        stat:true,
+        todo:"GREATiie"
+    },{
+        id:5,
+        stat:false,
+        todo:"TODO APP"
+    }
+]
 }
     render(){
         return(
