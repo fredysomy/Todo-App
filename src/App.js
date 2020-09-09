@@ -49,7 +49,7 @@ class App extends Component{
     }
     addTodo=(title)=>{
         const newtodo={
-            id:this.state.todos.length,
+            id:this.state.todos.length+1,
             todo:title,
             stat:true
         }
