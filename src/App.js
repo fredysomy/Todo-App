@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import AddTodo from './components/AddTodo';
 import Todos from './components/Todos';
 
 class App extends Component{
@@ -45,15 +45,25 @@ class App extends Component{
         })});
     }
     deltodo=(id)=>{
-            this.setState({todos : [...this.state.todos.filter(todo=> todo.id!==id)]});
+            this.setState({todos : this.state.todos.filter(todo=> todo.id!==id)});
+    }
+    addTodo=(title)=>{
+        const newtodo={
+            id:this.state.todos.length,
+            todo:title,
+            stat:true
+        }
+       this.setState({todos : [...this.state.todos,newtodo]})
     }
     render(){
         return(
             <div>
             <h1 className="App" align="center">TODOS LIST</h1>
-            
+            <AddTodo addTodo={this.addTodo}/>
             <Todos todos={this.state.todos} markcomplete={this.markcomplete} deltodo={this.deltodo} />
+            
             </div>
+            
         )
     }
 }
