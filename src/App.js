@@ -6,35 +6,7 @@ import Todos from './components/Todos';
 
 class App extends Component{
      state={
-    todos:[
-        {
-        id:1,
-        stat:true,
-        todo:"LEARN REACT"
-    },
-    {
-        id:2,
-        stat:true,
-        todo:"LEARN NODE JS"
-    },
-    {
-        id:3,
-        stat:true,
-        todo:"LEARN EXPRESS JS"
-    },{
-        id:4,
-        stat:true,
-        todo:"LEARN DJANGO FRAMEWORK"
-    },{
-        id:5,
-        stat:true,
-        todo:"LEARN PHP FRAMEWORKS"
-    },{
-        id:6,
-        stat:true,
-        todo:"COMPLETE THIS APPLICATION"
-    }
-]
+    todos:[]
 }
  markcomplete=(id)=>{
         this.setState({todos: this.state.todos.map(todo=>{
@@ -49,12 +21,23 @@ class App extends Component{
     }
     addTodo=(title)=>{
         const newtodo={
-            id:this.state.todos.length+1,
+            id:this.state.todos.length+2,
             todo:title,
             stat:true
         }
        this.setState({todos : [...this.state.todos,newtodo]})
     }
+    componentWillMount() {
+    let list=localStorage.getItem('todoapp');
+    if(list){
+        this.setState({
+        todos: JSON.parse(localStorage.getItem('todoapp'))
+      })
+    }
+}
+componentDidUpdate() {
+    localStorage.setItem('todoapp', JSON.stringify(this.state.todos))
+}
     render(){
         return(
             <div>
@@ -67,5 +50,6 @@ class App extends Component{
         )
     }
 }
+
 
 export default App;

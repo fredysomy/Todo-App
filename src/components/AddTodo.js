@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import todoitem from './todoitem.css';
 
 export class AddTodo extends Component {
     state={
@@ -15,19 +16,20 @@ export class AddTodo extends Component {
     }
     render() {
         return (
-            <div style={{textAlign:'center'}}>
+            <div className="inputtodo">
           <form onSubmit={this.onSubmit}>
-            <input style={{textAlign:'center'}}
+            <input
                      placeholder="Enter your To-Do's" 
                      type="text" 
                      name="name"
+                     className="i"
                      value={this.state.title} 
                      onChange={this.titChange}/>
           
             <input
-             
+             className="btn"
             type="submit"
-             value="Submit" />
+             value="Add" />
             </form>
          </div>
         )

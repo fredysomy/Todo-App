@@ -1,6 +1,6 @@
 {
   "short_name": "Todo Application",
-  "name": "Todo App by Fredy",
+  "name": "To-Do's App",
   "icons": [
     {
       "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJ7cDYYkEiL6W9TRHZj3yqkWAHC7DNio82Vw&usqp=CAU",
@@ -13,7 +13,7 @@
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRwWt9NirqNvqiecgtbjf8Ds2iLLebKgTnSgw&usqp=CAU",
       "type": "image/png",
       "sizes": "512x512"
     }
