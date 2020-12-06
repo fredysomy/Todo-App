@@ -41,7 +41,7 @@ componentDidUpdate() {
     render(){
         return(
             <div>
-            <h1 className="App" align="center">TODOS LIST</h1>
+            <h1 className="App" align="center">TODOS LISDT</h1>
             <AddTodo addTodo={this.addTodo}/>
             <Todos todos={this.state.todos} markcomplete={this.markcomplete} deltodo={this.deltodo} />
             
